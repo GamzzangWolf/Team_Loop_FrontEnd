@@ -1,0 +1,297 @@
+/* 공통 스타일 */
+.PostDetailForm {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.PostDetailContainer {
+    width: 1010px;
+    height: 800px;
+    border: 1px solid #c6c6c6;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: row;
+    z-index: 0;
+}
+
+.DetailImage {
+    flex: 6;
+    position: relative;
+    overflow: hidden;
+}
+
+.DetailImage > img {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    object-fit: contain;
+    object-position: center;
+}
+
+.DetailInfo {
+    flex: 4;
+    position: relative;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.DetailInfo::-webkit-scrollbar,
+.comments::-webkit-scrollbar {
+    display: none;
+}
+
+.detailLine{
+    border-top: 1px solid #c6c6c6;
+}
+
+.detailWithReplyWrite{
+    max-width: 730px;
+}
+
+/* 댓글 관련 스타일 */
+.comments {
+    overflow-y: auto;
+    min-height: 570px;
+    position: relative;
+    z-index: 2;
+}
+
+.commentHeader {
+    width: 400px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.commentProfilePic {
+    margin: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 20px;
+    background-color: #c6c6c6;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.TopUserInfo .username{
+    font-weight: bold;
+}
+
+.comment .commentText {
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    margin-left: 57px;
+    width: 200px;
+}
+
+.comment .commentTime {
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    margin-left: 57px;
+    margin-top: 5px;
+    width: 200px;
+}
+
+.commentInput {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: white;
+    z-index: 3;
+}
+
+.commentInput .commentWrite {
+    border: none;
+    width: 315px;
+}
+
+.commentInput input[type="text"]:focus {
+    outline: none;
+}
+.commentUsername{
+    margin-right: 200px;
+    font-weight: bold;
+}
+
+.fixButton, 
+.delButton{
+    margin-left: 10px;
+    position: relative;
+}
+
+.compButton, 
+.cancelButton {
+    position: relative;
+}
+
+.fixButton {
+    float: right;
+}
+
+.fixButton:hover {
+    color: blue;
+}
+
+.delButton {
+    float: right;
+}
+
+.delButton:hover {
+    color: blue;
+}
+
+.compButton:hover {
+    color: blue;
+}
+
+.cancelButton {
+    margin-left: 3px;
+}
+
+.cancelButton:hover {
+    color: blue;
+}
+
+
+/* 유저 정보 관련 스타일 */
+.TopUserInfo, .PostUser {
+    display: flex;
+    align-items: center;
+}
+
+.ProfilePic, .PostProfilePic {
+    margin: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 20px;
+    background-color: #c6c6c6;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.ContentArea {
+    width: 100%;
+    /* min-height: 550px; */
+}
+
+.ContentArea .post-username {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.ContentArea .PostContent > p:last-of-type {
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    width: calc(100% - 150px);
+    margin-left: 57px;
+    margin-top: 5px;
+}
+
+/* 모달 창 관련 스타일 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    height: 800px;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 네비게이션 버튼 */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.prev-button, .next-button {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.prev-button {
+    background-image: url(../images/arrow_circle_left.png);
+    left: 10px;
+}
+
+.next-button {
+    background-image: url(../images/arrow_circle_right.png);
+    right: 10px;
+}
+
+.prev-button:hover {
+    background-image: url(../images/arrow_circle_left_pink.png);
+}
+
+.next-button:hover {
+    background-image: url(../images/arrow_circle_right_pink.png);
+}
+
+.PostSave {
+    width: 17px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+.replyWriteArea {
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 100;
+    /* border: 10px solid inherit; */
+}
+
+.commentLike img {width: 16px; position: block;}
+
+.comment_cont{display: flex;}
+.comment_cont .comment_cont2{margin-right: 80px;}

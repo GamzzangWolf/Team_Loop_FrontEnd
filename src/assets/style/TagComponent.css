@@ -1,0 +1,86 @@
+/* 검색 바 스타일 */
+.tagSerchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.tagSerchBar input[type="search"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.tagSerchBar button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tagSerchBar button img {
+    width: 20px;
+    height: 20px;
+}
+
+.tagSerchBar button:hover {
+    background-color: gray;
+}
+
+
+
+
+/* 검색 결과 리스트 스타일 */
+.tagSearchResult ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.tagSearchResult ul li {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tagSearchResult ul li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 태그 항목 스타일 */
+.tagSearchResult ul li div {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+.tagSearchResult ul li div strong {
+    font-weight: bold;
+}
+
+
+.tagSearchResult div:not([role="alert"]) {
+    color: #777;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+}

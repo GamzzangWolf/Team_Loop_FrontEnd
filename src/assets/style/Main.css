@@ -1,0 +1,60 @@
+*{margin: 0; padding: 0; box-sizing:border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+button{cursor: pointer;}
+body{background: #fff; color: #333; position: relative;}
+
+.con1 img{max-width: 100%;}
+.con1{width:720px; position: absolute; top: 35px; left: 600px;}
+.con1 .search input[type="text"]{width: 620px; height: 60px; border-radius: 20px; margin-left: 12.5px;border-color: #DCDCDC; padding-left: 20px;}
+.con1 .search input[type="text"]:focus{border-color:#DCDCDC;}
+.con1 .search img{width: 36px; position: absolute; right: 120px; top: 10px;}
+
+.con1 .post{margin-top: 50px; display: block; width: 645px; border: 1px solid #DCDCDC; padding: 12px 85px;}
+.con1 .post .profile{display: flex; gap: 12px;}
+.con1 .post .profile .profile_img img{width: 40px; height: 40px; border-radius: 50%; border: 1px solid #DCDCDC;}
+.con1 .post .profile .profile_img:hover{cursor: pointer;}
+.con1 .post .profile .profile_cont .name{font-size: 16px; font-weight: bold;}
+.con1 .post .profile .profile_cont .location{font-size: 11px;}
+
+.con1 .post .images{width: 470px; height: 470px; margin-top: 12px; border: 1px solid #DCDCDC; position: relative;}
+
+.con1 .post .cont{display: flex; gap: 20px;margin:10px 0;}
+
+.imgBox { width: 100%; height: 100%; position: relative; }
+
+.imgBox img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;}
+
+.images > .picLRButton{
+   display: flex;
+   z-index: 100;
+   margin-top: 200px;
+   position: absolute;
+   width: 100%;
+   justify-content: space-between;
+}
+.images > .picLRButton > .picLeft{
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/arrow_circle_left.png);
+    background-size: cover;
+}
+.images > .picLRButton > .picLeft:hover{
+    background-image: url(../images/arrow_circle_left_pink.png);
+}
+.images > .picLRButton > .picRight{
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/arrow_circle_right.png);
+    background-size: cover;
+}
+.images > .picLRButton > .picRight:hover{
+    background-image: url(../images/arrow_circle_right_pink.png);
+}
+.images > .picLRButton > .arrowHide{
+    visibility: hidden;
+}
+
+.replyButton:hover{
+    cursor: pointer;
+}
